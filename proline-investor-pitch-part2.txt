@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0; background-color: #ffffff; color: #1a1a1a; font-family: 'Noto Sans JP', sans-serif;">
+
+    <div style="max-width: 540px; margin: 0 auto;">
+
+        <!-- 2024年問題セクション -->
+        <div style="padding: 40px 20px; border-top: 1px solid #e5e5e5;">
+
+            <!-- セクションラベル -->
+            <p style="color: #ef4444; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-align: center; margin: 0 0 12px 0;">2024年問題</p>
+
+            <!-- 見出し -->
+            <h2 style="font-size: 22px; font-weight: 900; line-height: 1.4; text-align: center; margin: 0 0 16px 0; color: #1a1a1a;">
+                ドライバーに人が集まらんのは<br>
+                <span style="color: #ef4444;">稼げなくなったから</span>や。
+            </h2>
+
+            <p style="color: #666666; font-size: 14px; line-height: 1.7; text-align: center; margin: 0 0 32px 0;">
+                2024年4月、法律が変わった。<br>
+                <span style="color: #1a1a1a; font-weight: 700;">残業規制により「働きたくても働けない」状況に。</span>
+            </p>
+
+            <!-- 3つの危機カード -->
+            <div style="margin-bottom: 24px;">
+
+                <!-- THE LIMIT -->
+                <div style="background-color: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 20px; margin-bottom: 12px;">
+                    <p style="color: #ef4444; font-size: 10px; font-weight: 700; letter-spacing: 1px; margin: 0 0 8px 0;">THE LIMIT</p>
+                    <p style="color: #1a1a1a; font-size: 18px; font-weight: 900; margin: 0 0 4px 0;">収入の限界</p>
+                    <p style="color: #ef4444; font-size: 24px; font-weight: 900; margin: 0 0 8px 0;">年960時間</p>
+                    <p style="color: #666666; font-size: 13px; line-height: 1.6; margin: 0;">残業規制で<span style="color: #1a1a1a; font-weight: 700;">年収が数十万ダウン</span>。ベテランが離職。</p>
+                </div>
+
+                <!-- THE WASTE -->
+                <div style="background-color: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 20px; margin-bottom: 12px;">
+                    <p style="color: #ef4444; font-size: 10px; font-weight: 700; letter-spacing: 1px; margin: 0 0 8px 0;">THE WASTE</p>
+                    <p style="color: #1a1a1a; font-size: 18px; font-weight: 900; margin: 0 0 4px 0;">時間の浪費</p>
+                    <p style="color: #ef4444; font-size: 24px; font-weight: 900; margin: 0 0 8px 0;">1回1.6時間</p>
+                    <p style="color: #666666; font-size: 13px; line-height: 1.6; margin: 0;">平均荷待ち時間。<span style="color: #1a1a1a; font-weight: 700;">待機時間＝売上ゼロ</span>。</p>
+                </div>
+
+                <!-- THE COLLAPSE -->
+                <div style="background-color: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 20px;">
+                    <p style="color: #ef4444; font-size: 10px; font-weight: 700; letter-spacing: 1px; margin: 0 0 8px 0;">THE COLLAPSE</p>
+                    <p style="color: #1a1a1a; font-size: 18px; font-weight: 900; margin: 0 0 4px 0;">倒産ドミノ</p>
+                    <p style="color: #ef4444; font-size: 24px; font-weight: 900; margin: 0 0 8px 0;">過去最多</p>
+                    <p style="color: #666666; font-size: 13px; line-height: 1.6; margin: 0;">2024年、運送会社の倒産が<span style="color: #1a1a1a; font-weight: 700;">過去最多ペース</span>。</p>
+                </div>
+            </div>
+
+            <!-- 結論ボックス -->
+            <div style="background-color: #f0fdf4; border: 2px solid #06C755; border-radius: 12px; padding: 20px; text-align: center;">
+                <p style="color: #06C755; font-size: 14px; font-weight: 700; line-height: 1.6; margin: 0;">
+                    だからこそ、<span style="color: #1a1a1a;">We-LOGIの「高単価・待機ゼロ・アプリ配車」</span>だけがドライバーを救い、利益を出せる唯一のモデル。
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

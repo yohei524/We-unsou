@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Transport | 事務員ゼロ。だから、給料が高い。</title>
+    <meta name="description" content="AIによる完全自動化で管理コストを極限まで削減。浮いた利益はすべて「走る人」に還元する次世代型運送プロジェクト。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark': '#0a0a0a',
+                        'dark-sub': '#111111',
+                        'dark-card': '#161616',
+                        'neon': '#00F5D4',
+                        'neon-blue': '#00D4FF',
+                    },
+                    fontFamily: {
+                        'sans': ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Noto Sans JP', sans-serif; }
+        body { background-color: #0a0a0a; }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(0, 245, 212, 0.5), 0 0 40px rgba(0, 245, 212, 0.3);
+        }
+        .glow-blue {
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5), 0 0 40px rgba(0, 212, 255, 0.3);
+        }
+        .glow-box {
+            box-shadow: 0 0 30px rgba(0, 245, 212, 0.15);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #00F5D4 0%, #00D4FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-line {
+            background: linear-gradient(135deg, #06C755 0%, #00B548 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-line:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(6, 199, 85, 0.4);
+        }
+
+        .number-huge {
+            font-size: clamp(4rem, 15vw, 10rem);
+            font-weight: 900;
+            line-height: 1;
+            color: rgba(255, 255, 255, 0.03);
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #161616 0%, #111111 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 245, 212, 0.3), transparent);
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- ナビゲーション -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-black">We</span>
+                <span class="text-neon text-sm font-bold tracking-wider">TRANSPORT</span>
+            </div>
+            <a href="#entry" class="btn-line text-white px-6 py-2.5 rounded-full font-bold text-sm">
+                エントリー
+            </a>
+        </div>
+    </nav>
+
+    <!-- ヒーロー -->
+    <section class="min-h-screen pt-32 pb-20 px-6 flex items-center">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="grid lg:grid-cols-5 gap-12 items-center">
+                <div class="lg:col-span-3 fade-in">
+                    <p class="text-neon font-bold text-sm tracking-widest mb-6">NEXT-GEN LOGISTICS PROJECT</p>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-8">
+                        <span class="text-white">事務員ゼロ。</span><br>
+                        <span class="gradient-text glow-text">だから、給料が高い。</span>
+                    </h1>
+
+                    <p class="text-gray-400 text-lg leading-relaxed mb-12 max-w-xl">
+                        AIによる完全自動化で、管理コストを極限まで削減。<br>
+                        浮いた利益は、すべて<span class="text-white font-bold">「走る人」</span>に還元する。
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#entry" class="btn-line inline-flex items-center justify-center gap-3 text-white px-10 py-5 rounded-full font-bold text-lg">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                        </svg>
+                        LINEでエントリー
+                    </a>
+                    <a href="#model" class="inline-flex items-center justify-center gap-2 border border-white/20 text-white px-10 py-5 rounded-full font-bold hover:bg-white/5 transition-colors">
+                        仕組みを見る
+                    </a>
+                </div>
+                </div>
+
+                <!-- 小西洋平 画像 -->
+                <div class="lg:col-span-2 fade-in">
+                    <div class="card rounded-3xl p-8 text-center glow-box">
+                        <img src="https://uje16oqk.autosns.app/s/GeneratedImageDecember04,2025-4_36PM.png?uid=[[uid]]" alt="小西洋平" class="w-40 h-40 rounded-full mx-auto mb-6 object-cover shadow-xl">
+                        <p class="text-gray-500 text-sm mb-2">CMO 小西洋平</p>
+                        <p class="text-white font-bold">トラック × AI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ビジネスモデル -->
+    <section id="model" class="py-24 px-6 bg-dark-sub">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-neon font-bold text-sm tracking-widest mb-4">BUSINESS MODEL</p>
+                <h2 class="text-3xl sm:text-4xl font-black">
+                    なぜ<span class="gradient-text">給料が高い</span>のか？
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 fade-in">
+                <!-- 従来モデル -->
+                <div class="card rounded-2xl p-8 opacity-60">
+                    <p class="text-gray-500 text-sm font-bold mb-2">OLD MODEL</p>
+                    <h3 class="text-xl font-bold text-gray-400 mb-8">従来の運送会社</h3>
+
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-3 border-b border-white/5">
+                            <span class="text-gray-400">売上</span>
+                            <span class="font-bold">100%</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-white/5">
+                            <span class="text-red-400">事務所経費</span>
+                            <span class="font-bold text-red-400">-20%</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-white/5">
+                            <span class="text-red-400">事務員給与</span>
+                            <span class="font-bold text-red-400">-25%</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3">
+                            <span class="text-gray-500">ドライバー給与</span>
+                            <span class="font-bold text-gray-500 line-through">少ない...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- We Transportモデル -->
+                <div class="card rounded-2xl p-8 glow-box border border-neon/20">
+                    <p class="text-neon font-bold text-sm mb-2">NEW MODEL</p>
+                    <h3 class="text-xl font-bold text-white mb-8">We Transport</h3>
+
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-3 border-b border-white/5">
+                            <span class="text-gray-400">売上</span>
+                            <span class="font-bold">100%</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-neon/20 bg-neon/5 -mx-4 px-4 rounded">
+                            <span class="text-neon font-bold">AI自動管理</span>
+                            <span class="font-black text-neon text-xl">ほぼ¥0</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3">
+                            <span class="text-white font-bold">ドライバー給与</span>
+                            <span class="font-black gradient-text text-2xl glow-text">極大化</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MADE IN TRUCK -->
+    <section class="py-24 px-6 bg-dark">
+        <div class="max-w-3xl mx-auto text-center fade-in">
+            <p class="text-neon-blue font-bold text-sm tracking-widest mb-6">MADE IN TRUCK</p>
+
+            <h2 class="text-3xl sm:text-4xl font-black leading-tight mb-8">
+                このサイトも、システムも、<br>
+                <span class="gradient-text glow-blue">すべてトラックの中で作られた。</span>
+            </h2>
+
+            <div class="card rounded-2xl p-8 text-left">
+                <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                    信じられないかもしれませんが、あなたが今見ているこのサイト、YouTube動画、採用システム。
+                    これらはすべて、CMO小西が<span class="text-neon font-bold">「4tトラックの運転席」</span>で構築しました。
+                </p>
+                <div class="border-l-4 border-neon pl-6">
+                    <p class="text-white font-bold text-xl">
+                        オフィスも事務員もいらないことを、<br>
+                        私たちが証明しました。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube動画 -->
+    <section class="py-24 px-6 bg-dark-sub">
+        <div class="max-w-4xl mx-auto fade-in">
+            <div class="text-center mb-12">
+                <p class="text-red-400 font-bold text-sm tracking-widest mb-4">YOUTUBE</p>
+                <h2 class="text-3xl sm:text-4xl font-black">
+                    <span class="gradient-text">動画で見る</span>We Transport
+                </h2>
+            </div>
+
+            <div class="card rounded-2xl p-4 md:p-6 glow-box">
+                <div class="aspect-video rounded-xl overflow-hidden bg-black">
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/9Q5xz_3CDXo"
+                        title="We Transport"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        class="w-full h-full">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2つの強み -->
+    <section class="py-24 px-6 bg-dark">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-neon font-bold text-sm tracking-widest mb-4">OUR STRENGTHS</p>
+                <h2 class="text-3xl sm:text-4xl font-black">
+                    <span class="gradient-text">2つの圧倒的強み</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 fade-in">
+                <!-- 強み1 -->
+                <div class="card rounded-2xl p-8 relative overflow-hidden">
+                    <span class="number-huge">01</span>
+                    <div class="relative z-10">
+                        <p class="text-neon font-black text-6xl mb-4">01</p>
+                        <h3 class="text-2xl font-black text-white mb-4">事務員ゼロで高給与</h3>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            AI自動化により管理コストを極限まで削減。
+                            浮いた人件費（月30〜40万円）をドライバーの日当に還元。
+                        </p>
+                        <p class="text-neon font-bold">他社の1.25〜1.5倍の日当を実現</p>
+                    </div>
+                </div>
+
+                <!-- 強み2 -->
+                <div class="card rounded-2xl p-8 relative overflow-hidden">
+                    <span class="number-huge">02</span>
+                    <div class="relative z-10">
+                        <p class="text-neon-blue font-black text-6xl mb-4">02</p>
+                        <h3 class="text-2xl font-black text-white mb-4">車両のプロがバックアップ</h3>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            代表は自動車販売会社の社長でもあります。
+                            車両トラブルへの即座の対応、独立支援も万全。
+                        </p>
+                        <p class="text-neon-blue font-bold">トラック格安リース・販売で独立支援</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3つの「We」 -->
+    <section class="py-24 px-6 bg-dark-sub">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-neon font-bold text-sm tracking-widest mb-4">THE 3 "WE"s</p>
+                <h2 class="text-3xl sm:text-4xl font-black">
+                    私たちの<span class="gradient-text">行動指針</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 fade-in">
+                <div class="card rounded-2xl p-8 text-center">
+                    <p class="text-neon font-black text-5xl mb-2">DRIVE</p>
+                    <h3 class="text-xl font-black text-white mb-4">We Drive</h3>
+                    <p class="text-gray-500 text-sm">プロとして確実に運ぶ。信頼される物流の担い手。</p>
+                </div>
+
+                <div class="card rounded-2xl p-8 text-center glow-box border border-neon/20">
+                    <p class="text-neon font-black text-5xl mb-2 glow-text">AI</p>
+                    <h3 class="text-xl font-black text-white mb-4">We Use AI</h3>
+                    <p class="text-gray-500 text-sm">テクノロジーで無駄をなくす。最新技術を使いこなす。</p>
+                </div>
+
+                <div class="card rounded-2xl p-8 text-center">
+                    <p class="text-neon-blue font-black text-5xl mb-2">UP</p>
+                    <h3 class="text-xl font-black text-white mb-4">We Step Up</h3>
+                    <p class="text-gray-500 text-sm">ここを通過点として上を目指す。起業、独立、経営者へ。</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center fade-in">
+                <div class="inline-block card rounded-2xl p-6">
+                    <p class="text-gray-300 leading-relaxed">
+                        「代表の宇井は、<span class="text-neon font-bold">元大型トラックドライバー</span>から<span class="text-white font-bold">会社社長</span>になった。<br>
+                        次は、<span class="gradient-text font-bold">あなたの番</span>だ。」
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 経営陣 -->
+    <section class="py-24 px-6 bg-dark">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-neon font-bold text-sm tracking-widest mb-4">FOUNDING TEAM</p>
+                <h2 class="text-3xl sm:text-4xl font-black">
+                    <span class="gradient-text">最強のタッグ</span>
+                </h2>
+                <p class="text-gray-500 mt-4">現場と車（ハード）× ITと発信（ソフト）</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 fade-in">
+                <!-- CEO -->
+                <div class="card rounded-2xl p-8">
+                    <div class="flex items-center gap-2 mb-6">
+                        <span class="bg-neon/20 text-neon px-3 py-1 rounded-full text-xs font-bold">CEO</span>
+                        <span class="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs">元大型ドライバー</span>
+                    </div>
+                    <div class="text-center mb-4">
+                        <img src="https://uje16oqk.autosns.app/s/スクリーンショット2025-12-0416.38.50.png?uid=[[uid]]" alt="宇井武志" class="w-20 h-20 rounded-full mx-auto object-cover">
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-2 text-center">宇井 武志</h3>
+                    <p class="text-gray-500 text-sm mb-6 text-center">運送会社＆自動車販売会社 代表</p>
+
+                    <div class="border-l-4 border-neon pl-4 mb-6">
+                        <p class="text-white font-bold">
+                            「ハンドルを握っていたから、現場のすべてがわかる。」
+                        </p>
+                    </div>
+
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        元大型ドライバーからの叩き上げ。現在は運送会社と自動車販売店を経営。
+                        現場の苦労を知り尽くしているからこそ、ドライバーファーストな環境を提供できる。
+                    </p>
+                </div>
+
+                <!-- CMO -->
+                <div class="card rounded-2xl p-8">
+                    <div class="flex items-center gap-2 mb-6">
+                        <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-xs font-bold">CMO</span>
+                        <span class="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs">元58万人YouTuber</span>
+                    </div>
+                    <div class="text-center mb-4">
+                        <img src="https://uje16oqk.autosns.app/s/GeneratedImageDecember04,2025-4_36PM.png?uid=[[uid]]" alt="小西洋平" class="w-20 h-20 rounded-full mx-auto object-cover">
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-2 text-center">小西 洋平</h3>
+                    <p class="text-gray-500 text-sm mb-6 text-center">DX設計 / AI活用コンサルタント</p>
+
+                    <div class="border-l-4 border-neon-blue pl-4 mb-6">
+                        <p class="text-white font-bold">
+                            「トラックの中からAIで世界を変える。」
+                        </p>
+                    </div>
+
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        元登録者58万人のYouTuber。現在も4tトラックを走らせながら、
+                        AIを駆使してこのサイトや採用システムを構築。あなたの価値を最大化する仕掛け人。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="entry" class="py-24 px-6 bg-dark-sub">
+        <div class="max-w-3xl mx-auto text-center fade-in">
+            <p class="text-neon font-bold text-sm tracking-widest mb-6">JOIN US</p>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+                <span class="gradient-text glow-text">新しい働き方</span>を、<br>
+                一緒に創りませんか？
+            </h2>
+
+            <p class="text-gray-400 text-lg mb-12">
+                事務員ゼロの運送会社。<br>
+                AIを使いこなし、自分の価値を最大化する。<br>
+                そんな未来を、今ここから。
+            </p>
+
+            <a href="#" class="btn-line inline-flex items-center gap-3 text-white font-black text-xl px-12 py-6 rounded-full">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                </svg>
+                LINEでエントリー（AI面接）
+            </a>
+
+            <p class="text-gray-600 text-sm mt-6">
+                履歴書不要・24時間受付
+            </p>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="py-12 px-6 bg-dark border-t border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl font-black">We</span>
+                    <span class="text-neon text-xs font-bold tracking-wider">TRANSPORT</span>
+                </div>
+                <div class="text-gray-600 text-sm text-center sm:text-right">
+                    <p>We Transport = Ui Transport</p>
+                    <p class="mt-1">&copy; 2024 We Transport. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- スクロールアニメーション -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

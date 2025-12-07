@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja" style="background-color: #0B2346 !important; margin: 0; padding: 0; min-height: 100vh;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物流DX・M&Aプロジェクト 創業計画スキーム | 宇井運送 Weプロジェクト</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'trust-navy': '#0B2346',
+                        'trust-blue': '#1E3A5F',
+                        'neon-blue': '#00D4FF',
+                        'neon-cyan': '#00F5D4',
+                        'gold': '#FFD700',
+                        'gold-dark': '#B8860B',
+                        'gold-light': '#FFF8DC',
+                    },
+                    fontFamily: {
+                        'sans': ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 強制的な背景色指定 */
+        html, body {
+            background-color: #0B2346 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            min-height: 100vh !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        #wrapper {
+            background-color: #0B2346 !important;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 10mm;
+            background-color: #0B2346;
+        }
+
+        @media print {
+            html, body, #wrapper {
+                background-color: #0B2346 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .neon-gradient {
+            background: linear-gradient(135deg, #00D4FF 0%, #00F5D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .box-gold {
+            border: 2px solid #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(255, 215, 0, 0.05);
+        }
+
+        .box-neon {
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), inset 0 0 20px rgba(0, 212, 255, 0.05);
+        }
+
+        .box-trust {
+            border: 2px solid #4A90D9;
+            box-shadow: 0 0 15px rgba(74, 144, 217, 0.2);
+        }
+
+        .pillar-card {
+            background: linear-gradient(145deg, rgba(30, 58, 95, 0.9) 0%, rgba(10, 22, 40, 0.95) 100%);
+            backdrop-filter: blur(10px);
+        }
+
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 20px solid #FFD700;
+            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+        }
+
+        .arrow-up {
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 16px solid #00D4FF;
+            filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.5));
+        }
+
+        .connector-line {
+            background: linear-gradient(90deg, transparent, #00D4FF, transparent);
+            height: 2px;
+        }
+
+        .glow-gold {
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .glow-neon {
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        .highlight-box {
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+            border-left: 3px solid #FFD700;
+        }
+    </style>
+</head>
+<body style="background-color: #0B2346 !important; margin: 0 !important; padding: 0 !important; min-height: 100vh !important;" class="text-white">
+    <!-- ラッパー：全コンテンツを囲む -->
+    <div id="wrapper" style="background-color: #0B2346 !important; width: 100%; min-height: 100vh; padding: 24px;">
+        <div class="max-w-[1100px] mx-auto">
+
+        <!-- ==================== -->
+        <!-- HEADER -->
+        <!-- ==================== -->
+        <header class="text-center mb-6">
+            <h1 class="text-2xl md:text-3xl font-black mb-2">
+                <span class="gold-gradient glow-gold">物流DX・M&Aプロジェクト</span>
+                <span class="text-white ml-2">創業計画スキーム</span>
+            </h1>
+            <p class="text-base md:text-lg text-gray-300">
+                <span class="text-gold font-bold">「カネ」</span>
+                <span class="text-neon-blue font-bold">「モノ」</span>
+                <span class="text-neon-cyan font-bold">「ヒト」</span>
+                が完結する、<span class="font-bold text-white">必勝のトライアングル・モデル</span>
+            </p>
+        </header>
+
+        <!-- ==================== -->
+        <!-- EXIT (TOP) -->
+        <!-- ==================== -->
+        <section class="mb-4">
+            <div class="box-gold rounded-xl p-4 bg-gradient-to-r from-trust-navy via-trust-blue to-trust-navy text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/5 to-transparent"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center justify-center gap-3 mb-2">
+                        <svg class="w-6 h-6 text-gold" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                        <span class="text-gold font-black text-xl tracking-wider">EXIT（出口戦略）</span>
+                        <svg class="w-6 h-6 text-gold" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                    </div>
+                    <p class="text-2xl md:text-3xl font-black gold-gradient glow-gold mb-2">
+                        企業価値 5億〜10億円
+                    </p>
+                    <p class="text-sm text-gray-300">
+                        <span class="text-gold font-bold">「ユニバース」</span>または<span class="text-gold font-bold">「大豊グループ」</span>等へのM&A売却 / グループ入り
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arrow Down -->
+        <div class="flex justify-center mb-4">
+            <div class="flex flex-col items-center">
+                <div class="w-1 h-6 bg-gradient-to-b from-gold to-neon-blue"></div>
+                <div class="arrow-down"></div>
+            </div>
+        </div>
+
+        <!-- ==================== -->
+        <!-- CORE (CENTER) -->
+        <!-- ==================== -->
+        <section class="mb-4">
+            <div class="box-neon rounded-xl p-5 bg-gradient-to-r from-trust-navy via-trust-blue to-trust-navy text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-neon-blue/5 to-transparent"></div>
+                <div class="relative z-10">
+                    <p class="text-neon-blue font-mono text-xs tracking-widest mb-1">NEW COMPANY</p>
+                    <h2 class="text-2xl md:text-3xl font-black mb-2">
+                        宇井運送 <span class="neon-gradient glow-neon">Weプロジェクト</span>
+                    </h2>
+                    <p class="text-base text-gray-200 mb-3 font-medium">
+                        "ヒト"と"シゴト"が自動で集まる、<span class="text-neon-cyan font-bold">関西発・次世代型DX運送会社</span>
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-neon-blue/20 border border-neon-blue/50 text-neon-blue px-3 py-1 rounded-full text-sm font-bold">
+                            事務員ゼロ（AI管理）
+                        </span>
+                        <span class="bg-neon-cyan/20 border border-neon-cyan/50 text-neon-cyan px-3 py-1 rounded-full text-sm font-bold">
+                            採用コストゼロ（SNS集客）
+                        </span>
+                        <span class="bg-gold/20 border border-gold/50 text-gold px-3 py-1 rounded-full text-sm font-bold">
+                            高利益率体質
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arrows Up from 3 Pillars -->
+        <div class="flex justify-around mb-3 px-8">
+            <div class="flex flex-col items-center">
+                <div class="arrow-up"></div>
+                <div class="w-1 h-4 bg-gradient-to-t from-neon-blue to-transparent"></div>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="arrow-up"></div>
+                <div class="w-1 h-4 bg-gradient-to-t from-neon-blue to-transparent"></div>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="arrow-up"></div>
+                <div class="w-1 h-4 bg-gradient-to-t from-neon-blue to-transparent"></div>
+            </div>
+        </div>
+
+        <!-- ==================== -->
+        <!-- 3 PILLARS -->
+        <!-- ==================== -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+
+            <!-- Pillar 1: 宇井 -->
+            <div class="pillar-card box-trust rounded-xl p-4 relative">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent rounded-t-xl"></div>
+
+                <div class="text-center mb-3">
+                    <span class="bg-blue-500/30 text-blue-300 text-xs font-bold px-3 py-1 rounded-full">
+                        信用・仕事
+                    </span>
+                </div>
+
+                <h3 class="text-lg font-black text-center mb-1">
+                    <span class="text-blue-300">宇井 武志</span>
+                </h3>
+                <p class="text-xs text-gray-400 text-center mb-3">Founder / 案件獲得・実務統括</p>
+
+                <div class="space-y-2 mb-3">
+                    <p class="text-xs text-gray-400 font-bold mb-1">【資産（アセット）】</p>
+                    <div class="highlight-box px-3 py-2 rounded-r text-sm">
+                        <span class="text-gold font-bold">大豊グループ(関西大手)</span>との直ライン
+                        <p class="text-xs text-gray-400 mt-1">→ 創業初日から安定案件を確保</p>
+                    </div>
+                    <div class="bg-white/5 px-3 py-2 rounded text-sm">
+                        <span class="text-white font-bold">現場のプロ</span>
+                        <p class="text-xs text-gray-400 mt-1">奄美での運送・中古車事業実績、ヤマト運輸大型経験</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-2 text-center">
+                    <p class="text-xs text-gray-400">メリット</p>
+                    <p class="text-sm font-bold text-blue-300">「仕事（荷物）がない」リスクを<span class="text-gold">ゼロ化</span></p>
+                </div>
+            </div>
+
+            <!-- Pillar 2: 小西 -->
+            <div class="pillar-card box-neon rounded-xl p-4 relative">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-neon-cyan to-transparent rounded-t-xl"></div>
+
+                <div class="text-center mb-3">
+                    <span class="bg-neon-cyan/30 text-neon-cyan text-xs font-bold px-3 py-1 rounded-full">
+                        ヒト・仕組み
+                    </span>
+                </div>
+
+                <h3 class="text-lg font-black text-center mb-1">
+                    <span class="text-neon-cyan">小西 洋平</span>
+                </h3>
+                <p class="text-xs text-gray-400 text-center mb-3">CTO/CMO / 人材採用・システム構築(DX)</p>
+
+                <div class="space-y-2 mb-3">
+                    <p class="text-xs text-gray-400 font-bold mb-1">【資産（アセット）】</p>
+                    <div class="highlight-box px-3 py-2 rounded-r text-sm">
+                        <span class="text-gold font-bold">圧倒的集客力</span>
+                        <p class="text-xs text-gray-400 mt-1">YouTube総フォロワー数<span class="text-gold font-bold">58万人</span></p>
+                    </div>
+                    <div class="bg-white/5 px-3 py-2 rounded text-sm">
+                        <span class="text-neon-blue font-bold">DX・AI実装</span>
+                        <p class="text-xs text-gray-400 mt-1">事務員不要のオペレーション構築</p>
+                    </div>
+                    <div class="bg-white/5 px-3 py-2 rounded text-sm">
+                        <span class="text-white font-bold">内部情報</span>
+                        <p class="text-xs text-gray-400 mt-1">競合他社(ユニバース)のM&A条件を熟知</p>
+                    </div>
+                </div>
+
+                <div class="bg-neon-cyan/10 border border-neon-cyan/30 rounded-lg p-2 text-center">
+                    <p class="text-xs text-gray-400">メリット</p>
+                    <p class="text-sm font-bold text-neon-cyan">「ドライバー不足」リスクを<span class="text-gold">ゼロ化</span></p>
+                </div>
+            </div>
+
+            <!-- Pillar 3: 出資者 -->
+            <div class="pillar-card box-gold rounded-xl p-4 relative">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent rounded-t-xl"></div>
+
+                <div class="text-center mb-3">
+                    <span class="bg-gold/30 text-gold text-xs font-bold px-3 py-1 rounded-full">
+                        資金・加速
+                    </span>
+                </div>
+
+                <h3 class="text-lg font-black text-center mb-1">
+                    <span class="text-gold">出資者</span>
+                </h3>
+                <p class="text-xs text-gray-400 text-center mb-3">資本政策・スピード</p>
+
+                <div class="space-y-2 mb-3">
+                    <p class="text-xs text-gray-400 font-bold mb-1">【資産（アセット）】</p>
+                    <div class="highlight-box px-3 py-2 rounded-r text-sm">
+                        <span class="text-gold font-bold">強力な資金力</span>
+                        <p class="text-xs text-gray-400 mt-1">三重の有力投資家とのパイプ</p>
+                    </div>
+                    <div class="bg-white/5 px-3 py-2 rounded text-sm">
+                        <span class="text-white font-bold">スピード</span>
+                        <p class="text-xs text-gray-400 mt-1">即座に車両・拠点を確保し、機会損失を防ぐ</p>
+                    </div>
+                </div>
+
+                <div class="bg-gold/10 border border-gold/30 rounded-lg p-2 text-center">
+                    <p class="text-xs text-gray-400">メリット</p>
+                    <p class="text-sm font-bold text-gold">「資金ショート」リスクを<span class="text-neon-cyan">ゼロ化</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== -->
+        <!-- THE 6 WE'S -->
+        <!-- ==================== -->
+        <section class="mb-6">
+            <div class="text-center mb-3">
+                <p class="text-neon-cyan font-mono text-xs tracking-widest">THE 6 WE'S</p>
+                <h3 class="text-lg font-black text-white">私たちが大切にする、<span class="neon-gradient">6つの約束</span></h3>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
+                <div class="bg-trust-blue/50 border border-neon-blue/30 rounded-lg p-2 text-center">
+                    <p class="text-neon-blue font-black text-sm mb-1">We Move</p>
+                    <p class="text-xs text-gray-300">私たちが、運ぶ</p>
+                </div>
+                <div class="bg-trust-blue/50 border border-neon-cyan/30 rounded-lg p-2 text-center">
+                    <p class="text-neon-cyan font-black text-sm mb-1">We Connect</p>
+                    <p class="text-xs text-gray-300">私たちが、繋ぐ</p>
+                </div>
+                <div class="bg-trust-blue/50 border border-blue-400/30 rounded-lg p-2 text-center">
+                    <p class="text-blue-400 font-black text-sm mb-1">We Optimize</p>
+                    <p class="text-xs text-gray-300">私たちが、最適化</p>
+                </div>
+                <div class="bg-trust-blue/50 border border-gold/30 rounded-lg p-2 text-center">
+                    <p class="text-gold font-black text-sm mb-1">We Share</p>
+                    <p class="text-xs text-gray-300">私たちが、分かち合う</p>
+                </div>
+                <div class="bg-trust-blue/50 border border-purple-400/30 rounded-lg p-2 text-center">
+                    <p class="text-purple-400 font-black text-sm mb-1">We Innovate</p>
+                    <p class="text-xs text-gray-300">私たちが、変える</p>
+                </div>
+                <div class="bg-trust-blue/50 border border-pink-400/30 rounded-lg p-2 text-center">
+                    <p class="text-pink-400 font-black text-sm mb-1">We Are</p>
+                    <p class="text-xs text-gray-300">私たちは、共にある</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== -->
+        <!-- FOOTER / CONCLUSION -->
+        <!-- ==================== -->
+        <footer class="text-center">
+            <div class="box-gold rounded-xl p-4 bg-gradient-to-r from-trust-navy via-trust-blue to-trust-navy relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-gold/5 via-gold/10 to-gold/5"></div>
+                <div class="relative z-10">
+                    <p class="text-xs text-gold font-bold tracking-widest mb-2">CONCLUSION</p>
+                    <p class="text-lg md:text-xl font-black">
+                        <span class="text-neon-blue">仕事はある。</span>
+                        <span class="text-neon-cyan">人は来る。</span>
+                        <span class="text-white">あとは</span>
+                        <span class="gold-gradient glow-gold">『車両を買う資金』</span>
+                        <span class="text-white">で、パズルは完成する。</span>
+                    </p>
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-500 mt-3">
+                &copy; 2025 宇井運送 Weプロジェクト | Confidential
+            </p>
+        </footer>
+
+        </div>
+    </div>
+</body>
+</html>

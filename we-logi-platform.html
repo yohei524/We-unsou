@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We-LOGI | 日本の物流を、私たちの手で救う。</title>
+    <meta name="description" content="物流クライシスに立ち向かう次世代プラットフォーム。ドライバーが稼げ、荷主が助かり、社会が良くなる「三方よし」の世界へ。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'we-black': '#000000',
+                        'we-white': '#FFFFFF',
+                        'we-blue': '#0055FF',
+                        'we-blue-light': '#3377FF',
+                        'we-blue-dark': '#0044CC',
+                        'we-gray': '#111111',
+                        'we-gray-light': '#1a1a1a',
+                        'we-gray-mid': '#888888',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'noto': ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /* スクロールアニメーション */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-up-delay-1 { transition-delay: 0.15s; }
+        .fade-up-delay-2 { transition-delay: 0.3s; }
+        .fade-up-delay-3 { transition-delay: 0.45s; }
+
+        /* ブルーグラデーション */
+        .text-gradient-blue {
+            background: linear-gradient(135deg, #0055FF 0%, #3377FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ボタン */
+        .btn-primary {
+            background: #0055FF;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #3377FF;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0, 85, 255, 0.3);
+        }
+
+        .btn-outline {
+            border: 1px solid #0055FF;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 85, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Weカード */
+        .we-card {
+            background: #111111;
+            border: 1px solid #222222;
+            transition: all 0.4s ease;
+        }
+
+        .we-card:hover {
+            border-color: #0055FF;
+            transform: translateY(-4px);
+        }
+
+        /* アプリモックアップ */
+        .phone-mockup {
+            background: linear-gradient(145deg, #1a1a1a 0%, #0a0a0a 100%);
+            border: 2px solid #222222;
+            border-radius: 40px;
+            box-shadow: 0 50px 100px rgba(0, 85, 255, 0.1);
+        }
+
+        /* ナラティブテキスト */
+        .narrative-text {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            line-height: 2;
+            letter-spacing: 0.02em;
+        }
+
+        /* 大見出し */
+        .hero-text {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        /* 数字強調 */
+        .stat-number {
+            font-size: clamp(3rem, 8vw, 5rem);
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        /* セクション分割 */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #222222, transparent);
+        }
+
+        /* スクロールヒント */
+        @keyframes scrollHint {
+            0%, 100% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(8px); opacity: 0.5; }
+        }
+
+        .scroll-hint {
+            animation: scrollHint 2s ease-in-out infinite;
+        }
+
+        /* ナビゲーション */
+        .nav-scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #222222;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl font-black tracking-tight">We-LOGI</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#story" class="text-sm text-gray-400 hover:text-white transition-colors">Story</a>
+                <a href="#solution" class="text-sm text-gray-400 hover:text-white transition-colors">Solution</a>
+                <a href="#values" class="text-sm text-gray-400 hover:text-white transition-colors">Values</a>
+                <a href="#join" class="btn-primary text-white px-6 py-2.5 rounded-full text-sm font-medium">
+                    参加する
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== -->
+    <!-- HERO SECTION -->
+    <!-- ==================== -->
+    <section class="min-h-screen flex items-center justify-center relative px-6 pt-20">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="fade-up mb-8">
+                <p class="text-we-blue font-medium tracking-[0.2em] text-sm mb-6">NEXT-GENERATION LOGISTICS PLATFORM</p>
+            </div>
+
+            <h1 class="fade-up fade-up-delay-1 hero-text font-black mb-8">
+                日本の物流を、<br>
+                <span class="text-gradient-blue">私たち</span>の手で救う。
+            </h1>
+
+            <div class="fade-up fade-up-delay-2 mb-12">
+                <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mx-auto font-noto">
+                    2024年問題。ドライバー不足。空車回送。<br>
+                    崩壊寸前の物流を、テクノロジーと「私たち」の力で立て直す。
+                </p>
+            </div>
+
+            <div class="fade-up fade-up-delay-3 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#join" class="btn-primary text-white font-bold px-10 py-4 rounded-full text-lg inline-flex items-center justify-center gap-2">
+                    <span>私たちに参加する</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#story" class="btn-outline text-we-blue font-medium px-10 py-4 rounded-full text-lg inline-flex items-center justify-center gap-2">
+                    <span>ストーリーを読む</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- スクロールヒント -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-hint">
+            <i data-lucide="chevron-down" class="w-6 h-6 text-gray-600"></i>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- STORY SECTION -->
+    <!-- ==================== -->
+    <section id="story" class="py-32 px-6">
+        <div class="max-w-3xl mx-auto">
+            <!-- 導入 -->
+            <div class="fade-up mb-24 text-center">
+                <p class="text-we-blue font-medium tracking-[0.2em] text-sm mb-6">THE CRISIS</p>
+                <h2 class="section-title font-black mb-8 font-noto">
+                    ドライバーが、<br>泣いている。
+                </h2>
+            </div>
+
+            <!-- ナラティブ本文 -->
+            <div class="space-y-16">
+                <div class="fade-up">
+                    <p class="narrative-text text-gray-300 font-noto">
+                        朝5時に起きて、トラックに乗り込む。<br>
+                        大阪から東京まで、500キロを走り抜く。
+                    </p>
+                </div>
+
+                <div class="fade-up">
+                    <p class="narrative-text text-gray-300 font-noto">
+                        荷物を届けた後、帰りの便がない。<br>
+                        <span class="text-white font-bold">空っぽのトラックで、500キロを戻る。</span>
+                    </p>
+                </div>
+
+                <div class="fade-up">
+                    <p class="narrative-text text-gray-300 font-noto">
+                        燃料代だけがかかり、売上はゼロ。<br>
+                        それでも、彼らは走り続けている。
+                    </p>
+                </div>
+
+                <!-- 統計 -->
+                <div class="fade-up grid grid-cols-2 md:grid-cols-3 gap-8 py-16 border-y border-white/10">
+                    <div class="text-center">
+                        <p class="stat-number font-black text-gradient-blue">40%</p>
+                        <p class="text-gray-500 text-sm mt-2 font-noto">空車回送率</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="stat-number font-black text-gradient-blue">14h</p>
+                        <p class="text-gray-500 text-sm mt-2 font-noto">平均労働時間</p>
+                    </div>
+                    <div class="text-center col-span-2 md:col-span-1">
+                        <p class="stat-number font-black text-gradient-blue">70%</p>
+                        <p class="text-gray-500 text-sm mt-2 font-noto">後継者不在率</p>
+                    </div>
+                </div>
+
+                <div class="fade-up">
+                    <p class="narrative-text text-gray-300 font-noto">
+                        電話とFAXで仕事を取り、<br>
+                        手書きの伝票で管理する。<br>
+                        <span class="text-gray-500">2024年に、まだこの光景がある。</span>
+                    </p>
+                </div>
+
+                <div class="fade-up">
+                    <p class="narrative-text text-white font-bold font-noto">
+                        この非効率を、放置していいのか。<br>
+                        ドライバーの悲鳴を、無視していいのか。
+                    </p>
+                </div>
+
+                <div class="fade-up text-center pt-8">
+                    <p class="text-2xl md:text-3xl font-black text-gradient-blue font-noto">
+                        私たちは、立ち上がることを決めた。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- ==================== -->
+    <!-- SOLUTION SECTION -->
+    <!-- ==================== -->
+    <section id="solution" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 fade-up">
+                <p class="text-we-blue font-medium tracking-[0.2em] text-sm mb-6">THE SOLUTION</p>
+                <h2 class="section-title font-black mb-6 font-noto">
+                    アプリで呼んで、<br>空車で帰らない。
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto font-noto">
+                    Uberがタクシーを変えたように。<br>
+                    We-LOGIが、物流を変える。
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- アプリモックアップ -->
+                <div class="fade-up order-2 lg:order-1">
+                    <div class="phone-mockup w-72 mx-auto p-4">
+                        <div class="bg-we-black rounded-[32px] p-5 aspect-[9/18] flex flex-col">
+                            <!-- ステータスバー -->
+                            <div class="flex items-center justify-between mb-4 px-2">
+                                <span class="text-xs text-gray-500">9:41</span>
+                                <div class="flex gap-1">
+                                    <div class="w-4 h-2 bg-gray-600 rounded-sm"></div>
+                                    <div class="w-4 h-2 bg-gray-600 rounded-sm"></div>
+                                </div>
+                            </div>
+
+                            <!-- アプリヘッダー -->
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="text-white font-bold">We-LOGI</span>
+                                <div class="w-8 h-8 bg-we-gray-light rounded-full"></div>
+                            </div>
+
+                            <!-- マップエリア -->
+                            <div class="bg-we-gray-light rounded-2xl flex-1 mb-4 relative overflow-hidden">
+                                <div class="absolute inset-0 opacity-30">
+                                    <div class="absolute top-1/4 left-1/3 w-3 h-3 bg-we-blue rounded-full"></div>
+                                    <div class="absolute top-1/2 right-1/4 w-3 h-3 bg-green-500 rounded-full"></div>
+                                    <div class="absolute bottom-1/3 left-1/2 w-3 h-3 bg-we-blue rounded-full"></div>
+                                    <div class="h-px w-20 bg-we-blue absolute top-1/3 left-1/4 rotate-45"></div>
+                                </div>
+                                <div class="absolute bottom-4 left-4 right-4 bg-we-black/80 backdrop-blur rounded-xl p-3">
+                                    <p class="text-xs text-gray-400">近くの空車</p>
+                                    <p class="text-white font-bold">3台が待機中</p>
+                                </div>
+                            </div>
+
+                            <!-- 配車ボタン -->
+                            <button class="w-full bg-we-blue text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2">
+                                <i data-lucide="truck" class="w-5 h-5"></i>
+                                配車をリクエスト
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 説明 -->
+                <div class="fade-up fade-up-delay-1 order-1 lg:order-2 space-y-8">
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-we-blue/10 border border-we-blue/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-we-blue font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 font-noto">荷主がアプリで配車依頼</h3>
+                            <p class="text-gray-400 font-noto">荷物情報を入力するだけ。AIが最適なドライバーを自動マッチング。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-we-blue/10 border border-we-blue/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-we-blue font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 font-noto">空車ドライバーに通知</h3>
+                            <p class="text-gray-400 font-noto">帰り道に荷物がある。空気を運ぶ無駄がなくなる。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-we-blue/10 border border-we-blue/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-we-blue font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 font-noto">全員がWin-Winに</h3>
+                            <p class="text-gray-400 font-noto">ドライバーは稼げる。荷主は安く運べる。社会から無駄が消える。</p>
+                        </div>
+                    </div>
+
+                    <!-- 三方よし図解 -->
+                    <div class="bg-we-gray rounded-2xl p-8 mt-8">
+                        <p class="text-center text-sm text-gray-500 mb-6 tracking-wider">三方よしの循環</p>
+                        <div class="flex items-center justify-center gap-4 flex-wrap">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-we-blue/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <i data-lucide="user" class="w-7 h-7 text-we-blue"></i>
+                                </div>
+                                <p class="text-sm text-white font-bold">ドライバー</p>
+                                <p class="text-xs text-gray-500">収入UP</p>
+                            </div>
+                            <i data-lucide="arrow-right" class="w-5 h-5 text-gray-600 hidden sm:block"></i>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-we-blue/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <i data-lucide="building-2" class="w-7 h-7 text-we-blue"></i>
+                                </div>
+                                <p class="text-sm text-white font-bold">荷主</p>
+                                <p class="text-xs text-gray-500">コストDOWN</p>
+                            </div>
+                            <i data-lucide="arrow-right" class="w-5 h-5 text-gray-600 hidden sm:block"></i>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-we-blue/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <i data-lucide="globe" class="w-7 h-7 text-we-blue"></i>
+                                </div>
+                                <p class="text-sm text-white font-bold">社会</p>
+                                <p class="text-xs text-gray-500">CO2削減</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- ==================== -->
+    <!-- THE 6 WE'S SECTION -->
+    <!-- ==================== -->
+    <section id="values" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 fade-up">
+                <p class="text-we-blue font-medium tracking-[0.2em] text-sm mb-6">OUR VALUES</p>
+                <h2 class="section-title font-black mb-6">
+                    The 6 <span class="text-gradient-blue">We</span>'s
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto font-noto">
+                    私たちが大切にする、6つの約束。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- We Move -->
+                <div class="we-card rounded-2xl p-8 fade-up">
+                    <div class="w-14 h-14 bg-we-blue/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="truck" class="w-7 h-7 text-we-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-2">We Move</h3>
+                    <p class="text-we-blue text-sm font-medium mb-4 font-noto">私たちが、運びます。</p>
+                    <p class="text-gray-400 text-sm leading-relaxed font-noto">
+                        プロフェッショナルなドライバーが、誇りを持って荷物を届けます。安全と品質を、絶対に妥協しません。
+                    </p>
+                </div>
+
+                <!-- We Connect -->
+                <div class="we-card rounded-2xl p-8 fade-up fade-up-delay-1">
+                    <div class="w-14 h-14 bg-we-blue/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="link" class="w-7 h-7 text-we-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-2">We Connect</h3>
+                    <p class="text-we-blue text-sm font-medium mb-4 font-noto">私たちが、繋ぎます。</p>
+                    <p class="text-gray-400 text-sm leading-relaxed font-noto">
+                        アプリが荷主とドライバーを直結。中間業者をなくし、シンプルで透明な取引を実現します。
+                    </p>
+                </div>
+
+                <!-- We Optimize -->
+                <div class="we-card rounded-2xl p-8 fade-up fade-up-delay-2">
+                    <div class="w-14 h-14 bg-we-blue/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="settings" class="w-7 h-7 text-we-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-2">We Optimize</h3>
+                    <p class="text-we-blue text-sm font-medium mb-4 font-noto">私たちが、無駄をなくします。</p>
+                    <p class="text-gray-400 text-sm leading-relaxed font-noto">
+                        AIによる帰り荷マッチングで空車回送をゼロに。電話・FAX・手書き伝票を全てデジタル化します。
+                    </p>
+                </div>
+
+                <!-- We Share -->
+                <div class="we-card rounded-2xl p-8 fade-up">
+                    <div class="w-14 h-14 bg-we-blue/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="heart-handshake" class="w-7 h-7 text-we-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-2">We Share</h3>
+                    <p class="text-we-blue text-sm font-medium mb-4 font-noto">私たちが、分かち合います。</p>
+                    <p class="text-gray-400 text-sm leading-relaxed font-noto">
+                        効率化で生まれた利益は、ドライバーに還元。走る人が報われる、フェアな仕組みを作ります。
+                    </p>
+                </div>
+
+                <!-- We Innovate -->
+                <div class="we-card rounded-2xl p-8 fade-up fade-up-delay-1">
+                    <div class="w-14 h-14 bg-we-blue/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="lightbulb" class="w-7 h-7 text-we-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-2">We Innovate</h3>
+                    <p class="text-we-blue text-sm font-medium mb-4 font-noto">私たちが、変えます。</p>
+                    <p class="text-gray-400 text-sm leading-relaxed font-noto">
+                        「運送業はこういうもの」という古い常識を、テクノロジーの力で打ち破ります。
+                    </p>
+                </div>
+
+                <!-- We Are -->
+                <div class="we-card rounded-2xl p-8 fade-up fade-up-delay-2 border-we-blue/50">
+                    <div class="w-14 h-14 bg-we-blue rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-2">We Are</h3>
+                    <p class="text-we-blue text-sm font-medium mb-4 font-noto">私たちは、あなたと共にあります。</p>
+                    <p class="text-gray-400 text-sm leading-relaxed font-noto">
+                        ドライバー、荷主、投資家、支援者。立場を超えて「私たち」になる。一緒に物流の未来を作りましょう。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- ==================== -->
+    <!-- ROADMAP SECTION -->
+    <!-- ==================== -->
+    <section id="roadmap" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-20 fade-up">
+                <p class="text-we-blue font-medium tracking-[0.2em] text-sm mb-6">ROADMAP</p>
+                <h2 class="section-title font-black mb-6 font-noto">
+                    関西から、全国へ。
+                </h2>
+            </div>
+
+            <div class="relative">
+                <!-- タイムライン -->
+                <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-we-blue via-we-blue/50 to-we-blue/10 md:-translate-x-1/2"></div>
+
+                <!-- 2025 -->
+                <div class="grid md:grid-cols-2 gap-8 mb-20 fade-up relative">
+                    <div class="md:text-right md:pr-12 pl-8 md:pl-0">
+                        <div class="absolute left-0 md:left-1/2 w-3 h-3 bg-we-blue rounded-full md:-translate-x-1/2 mt-2"></div>
+                        <span class="text-we-blue font-bold text-4xl">2025</span>
+                        <h3 class="text-xl font-black mt-2 mb-4 font-noto">関西始動</h3>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li>関西エリアに拠点設立</li>
+                            <li>トラック10台で稼働開始</li>
+                            <li>アプリβ版リリース</li>
+                            <li>売上目標：1億円</li>
+                        </ul>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </div>
+
+                <!-- 2026 -->
+                <div class="grid md:grid-cols-2 gap-8 mb-20 fade-up fade-up-delay-1 relative">
+                    <div class="hidden md:block"></div>
+                    <div class="md:pl-12 pl-8">
+                        <div class="absolute left-0 md:left-1/2 w-3 h-3 bg-we-blue rounded-full md:-translate-x-1/2 mt-2"></div>
+                        <span class="text-we-blue font-bold text-4xl">2026</span>
+                        <h3 class="text-xl font-black mt-2 mb-4 font-noto">全国拡大</h3>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li>運送会社2〜3社をM&A</li>
+                            <li>トラック50台体制へ</li>
+                            <li>アプリ正式版・外部開放</li>
+                            <li>売上目標：5億円</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2027 -->
+                <div class="grid md:grid-cols-2 gap-8 fade-up fade-up-delay-2 relative">
+                    <div class="md:text-right md:pr-12 pl-8 md:pl-0">
+                        <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-we-blue rounded-full md:-translate-x-1/2 mt-2 ring-4 ring-we-blue/30"></div>
+                        <span class="text-we-blue font-bold text-4xl">2027</span>
+                        <h3 class="text-xl font-black mt-2 mb-4 font-noto">EXIT</h3>
+                        <div class="bg-we-gray rounded-xl p-6 text-left md:text-right">
+                            <ul class="space-y-2 text-white text-sm">
+                                <li>大手物流企業への事業売却</li>
+                                <li>または IPO準備</li>
+                                <li class="text-we-blue font-bold">想定企業価値：10〜20億円</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- ==================== -->
+    <!-- JOIN US SECTION -->
+    <!-- ==================== -->
+    <section id="join" class="py-32 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-up">
+                <p class="text-we-blue font-medium tracking-[0.2em] text-sm mb-6">JOIN US</p>
+                <h2 class="section-title font-black mb-6 font-noto">
+                    あなたも、<span class="text-gradient-blue">私たち</span>になる。
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto font-noto">
+                    物流の未来を一緒に作りませんか。<br>
+                    あなたの参加が、日本を動かす力になります。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <!-- 投資家 -->
+                <div class="we-card rounded-2xl p-8 text-center fade-up">
+                    <div class="w-20 h-20 bg-we-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="briefcase" class="w-10 h-10 text-we-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-noto">投資家の方</h3>
+                    <p class="text-gray-500 text-sm mb-6 font-noto">シード投資・VC・エンジェル</p>
+                    <p class="text-gray-400 text-sm mb-6 font-noto">
+                        500万円〜の出資で、<br>物流革命のパートナーに。
+                    </p>
+                    <a href="#" class="btn-primary text-white font-bold px-6 py-3 rounded-full text-sm inline-flex items-center gap-2 w-full justify-center">
+                        資料請求
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- ドライバー -->
+                <div class="we-card rounded-2xl p-8 text-center fade-up fade-up-delay-1">
+                    <div class="w-20 h-20 bg-we-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="truck" class="w-10 h-10 text-we-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-noto">ドライバーの方</h3>
+                    <p class="text-gray-500 text-sm mb-6 font-noto">4t以上の経験者歓迎</p>
+                    <p class="text-gray-400 text-sm mb-6 font-noto">
+                        日当25,000円〜。<br>稼げる物流を、一緒に作ろう。
+                    </p>
+                    <a href="#" class="btn-primary text-white font-bold px-6 py-3 rounded-full text-sm inline-flex items-center gap-2 w-full justify-center">
+                        応募する
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- 荷主・提携 -->
+                <div class="we-card rounded-2xl p-8 text-center fade-up fade-up-delay-2">
+                    <div class="w-20 h-20 bg-we-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="building-2" class="w-10 h-10 text-we-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-noto">荷主・提携企業の方</h3>
+                    <p class="text-gray-500 text-sm mb-6 font-noto">法人のお客様</p>
+                    <p class="text-gray-400 text-sm mb-6 font-noto">
+                        配送コストを下げながら、<br>社会貢献も実現。
+                    </p>
+                    <a href="#" class="btn-primary text-white font-bold px-6 py-3 rounded-full text-sm inline-flex items-center gap-2 w-full justify-center">
+                        お問い合わせ
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- マイクロ出資 -->
+            <div class="bg-we-gray rounded-2xl p-8 md:p-12 text-center fade-up">
+                <div class="max-w-2xl mx-auto">
+                    <div class="w-16 h-16 bg-we-blue rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="heart" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-noto">一口オーナーになる</h3>
+                    <p class="text-gray-400 mb-8 font-noto">
+                        少額から物流革命に参加できます。<br>
+                        あなたの支援が、ドライバーの笑顔につながります。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#" class="btn-outline text-we-blue font-bold px-8 py-4 rounded-full inline-flex items-center justify-center gap-2">
+                            <i data-lucide="gift" class="w-5 h-5"></i>
+                            支援する（準備中）
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LINE CTA -->
+            <div class="text-center mt-12 fade-up">
+                <p class="text-gray-500 text-sm mb-6 font-noto">まずは気軽にお話ししませんか？</p>
+                <a href="#" class="inline-flex items-center gap-4 bg-[#06C755] text-white font-bold px-10 py-5 rounded-full text-lg hover:bg-[#00B548] transition-colors">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                    </svg>
+                    LINEで相談する
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- FOOTER -->
+    <!-- ==================== -->
+    <footer class="py-16 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                        <span class="text-2xl font-black tracking-tight">We-LOGI</span>
+                    </div>
+                    <p class="text-gray-600 text-sm font-noto">日本の物流を、私たちの手で救う。</p>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors">
+                        <i data-lucide="youtube" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-white/5 text-center">
+                <p class="text-gray-600 text-sm">&copy; 2024 We-LOGI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Lucide Icons
+        lucide.createIcons();
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

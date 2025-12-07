@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja" style="background-color: #0B2346 !important; margin: 0; padding: 0;" bgcolor="#0B2346">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>html, body { background-color: #0B2346 !important; }</style>
+</head>
+<body style="background-color: #0B2346 !important; margin: 0 !important; padding: 20px; font-family: 'Hiragino Sans', 'Meiryo', sans-serif; color: #ffffff;" bgcolor="#0B2346">
+
+    <!-- 背景用ラッパーテーブル -->
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#0B2346" style="background-color: #0B2346 !important;">
+        <tr>
+            <td bgcolor="#0B2346" style="background-color: #0B2346 !important; padding: 20px;">
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#0B2346" style="max-width: 900px; margin: 0 auto; background-color: #0B2346;">
+
+        <!-- HEADER -->
+        <tr>
+            <td align="center" style="padding-bottom: 20px;">
+                <h1 style="font-size: 24px; font-weight: bold; margin: 0 0 8px 0; color: #FFD700;">
+                    物流DX・M&Aプロジェクト <span style="color: #ffffff;">創業計画スキーム</span>
+                </h1>
+                <p style="font-size: 14px; color: #cccccc; margin: 0;">
+                    <span style="color: #FFD700; font-weight: bold;">「カネ」</span>
+                    <span style="color: #00D4FF; font-weight: bold;">「モノ」</span>
+                    <span style="color: #00F5D4; font-weight: bold;">「ヒト」</span>
+                    が完結する、<span style="font-weight: bold; color: #ffffff;">必勝のトライアングル・モデル</span>
+                </p>
+            </td>
+        </tr>
+
+        <!-- EXIT -->
+        <tr>
+            <td style="padding-bottom: 16px;">
+                <table width="100%" cellpadding="16" cellspacing="0" border="0" style="border: 2px solid #FFD700; border-radius: 12px; background-color: #1E3A5F;">
+                    <tr>
+                        <td align="center">
+                            <p style="color: #FFD700; font-weight: bold; font-size: 16px; margin: 0 0 8px 0;">
+                                ★ EXIT（出口戦略） ★
+                            </p>
+                            <p style="font-size: 26px; font-weight: bold; color: #FFD700; margin: 0 0 8px 0;">
+                                企業価値 5億〜10億円
+                            </p>
+                            <p style="font-size: 13px; color: #cccccc; margin: 0;">
+                                <span style="color: #FFD700; font-weight: bold;">「ユニバース」</span>または<span style="color: #FFD700; font-weight: bold;">「大豊グループ」</span>等へのM&A売却
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- 矢印 -->
+        <tr>
+            <td align="center" style="padding-bottom: 16px;">
+                <div style="width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 30px solid #FFD700;"></div>
+            </td>
+        </tr>
+
+        <!-- CORE -->
+        <tr>
+            <td style="padding-bottom: 16px;">
+                <table width="100%" cellpadding="20" cellspacing="0" border="0" style="border: 2px solid #00D4FF; border-radius: 12px; background-color: #1E3A5F;">
+                    <tr>
+                        <td align="center">
+                            <p style="color: #00D4FF; font-size: 11px; letter-spacing: 2px; margin: 0 0 4px 0;">NEW COMPANY</p>
+                            <h2 style="font-size: 24px; font-weight: bold; margin: 0 0 8px 0;">
+                                <span style="color: #ffffff;">宇井運送</span>
+                                <span style="color: #00F5D4;">Weプロジェクト</span>
+                            </h2>
+                            <p style="font-size: 14px; color: #eeeeee; margin: 0 0 16px 0;">
+                                "ヒト"と"シゴト"が自動で集まる、<span style="color: #00F5D4; font-weight: bold;">関西発・次世代型DX運送会社</span>
+                            </p>
+                            <table cellpadding="0" cellspacing="8" border="0" align="center">
+                                <tr>
+                                    <td style="border: 1px solid #00D4FF; color: #00D4FF; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: bold;">
+                                        事務員ゼロ
+                                    </td>
+                                    <td style="border: 1px solid #00F5D4; color: #00F5D4; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: bold;">
+                                        採用コストゼロ
+                                    </td>
+                                    <td style="border: 1px solid #FFD700; color: #FFD700; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: bold;">
+                                        高利益率
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- 矢印3本 -->
+        <tr>
+            <td align="center" style="padding: 8px 0;">
+                <table cellpadding="0" cellspacing="0" border="0" width="80%">
+                    <tr>
+                        <td width="33%" align="center">
+                            <div style="width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-bottom: 18px solid #00D4FF;"></div>
+                        </td>
+                        <td width="33%" align="center">
+                            <div style="width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-bottom: 18px solid #00D4FF;"></div>
+                        </td>
+                        <td width="33%" align="center">
+                            <div style="width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-bottom: 18px solid #00D4FF;"></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
