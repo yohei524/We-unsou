@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We運送 | 人生を捲れ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'we-green': '#06C755',
+                        'we-green-dark': '#00B548',
+                    },
+                    fontFamily: {
+                        'sans': ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .break-words {
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <!-- ラッパー -->
+    <div class="w-full max-w-screen-xl mx-auto px-4 overflow-x-hidden">
+
+        <!-- ナビゲーション -->
+        <nav class="py-4 flex justify-between items-center border-b border-gray-200">
+            <div>
+                <span class="text-2xl font-black">We</span>
+                <span class="text-sm font-bold text-we-green ml-1">運送</span>
+            </div>
+            <a href="#entry" class="bg-we-green text-white text-sm font-bold px-4 py-2 rounded-full hover:bg-we-green-dark transition-colors">
+                エントリー
+            </a>
+        </nav>
+
+        <!-- ヒーローセクション -->
+        <section class="py-12 md:py-20">
+            <div class="break-words">
+                <p class="text-we-green font-bold text-xs tracking-widest mb-4">FOR OSAKA PEOPLE</p>
+
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+                    金もない、夢もない。<br>
+                    未来も見えん。
+                </h1>
+
+                <p class="text-2xl md:text-4xl lg:text-5xl font-black leading-tight text-we-green mb-8">
+                    詰んでる大阪の<br class="md:hidden">
+                    おっさん、姉さん！<br>
+                    あんたの出番や。
+                </p>
+
+                <p class="text-base md:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
+                    搾取されるのはもう終わり。<br>
+                    <span class="font-bold text-gray-900">We運送で、日本を支えて、人生を捲れ。</span>
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#entry" class="inline-flex items-center justify-center gap-2 bg-we-green text-white font-bold text-base px-8 py-4 rounded-full hover:bg-we-green-dark transition-colors">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                        </svg>
+                        LINEで人生を変える
+                    </a>
+                    <a href="#message" class="inline-flex items-center justify-center border-2 border-gray-900 text-gray-900 font-bold text-base px-8 py-4 rounded-full hover:bg-gray-100 transition-colors">
+                        想いを読む
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- メッセージセクション -->
+        <section id="message" class="py-12 md:py-20 border-t border-gray-200">
+            <div class="max-w-3xl break-words">
+                <p class="text-we-green font-bold text-xs tracking-widest mb-4">MESSAGE FROM CMO</p>
+
+                <h2 class="text-2xl md:text-4xl font-black leading-tight mb-8">
+                    日本の物流も、<br>
+                    <span class="text-we-green">このままやと詰んでる。</span>
+                </h2>
+
+                <div class="space-y-6 text-base md:text-lg leading-relaxed text-gray-700">
+                    <p>
+                        誰も走る奴がおらん。
+                    </p>
+                    <p>
+                        物流は増え続けてるのに、支える奴がおらん。<br>
+                        このまま外国人の労働力だけに頼っててええんか！？<br>
+                        <span class="font-bold text-gray-900">日本人が日本支えんでどうする！？</span>
+                    </p>
+                    <p>
+                        「2024年問題？法律？規制？」<br>
+                        そんなもんで潰れてくんは、昭和のやり方を捨てられへん会社だけや。<br>
+                        <span class="font-bold text-we-green">俺らはDXで、その「壁」すらも「追い風」に変える。</span>
+                    </p>
+                    <p>
+                        <span class="font-bold text-gray-900">現場で汗かく人間が一番偉い。</span>それが本来の姿やろ。
+                    </p>
+                    <p>
+                        俺たちは、ただの「運び屋」やない。
+                    </p>
+
+                    <div class="bg-gray-100 border-l-4 border-we-green p-6 my-8">
+                        <p class="text-xl md:text-2xl font-black text-gray-900">
+                            「走るだけで終わりやない」
+                        </p>
+                    </div>
+
+                    <p>
+                        ウチでは教える。AIの使い方、SNSの発信、稼ぐためのスキル。
+                    </p>
+                    <p>
+                        トラックの中は、孤独な空間やない。<br>
+                        <span class="font-bold text-we-green">『最高の勉強場所』</span>であり、<span class="font-bold text-we-green">『世界への発信基地』</span>や。
+                    </p>
+                    <p class="font-bold text-gray-900">
+                        稼ぎながら学べ。<br>
+                        そして世界に発信するんや。
+                    </p>
+                    <p>
+                        次の時代の日本を作るのは、エリートやない。<br>
+                        泥臭くハンドルを握る、俺たち<span class="font-black text-we-green">『We』</span>や。
+                    </p>
+                </div>
+
+                <!-- 小西プロフィール -->
+                <div class="mt-12 flex items-center gap-4">
+                    <img src="https://uje16oqk.autosns.app/s/GeneratedImageDecember04,2025-4_36PM.png?uid=[[uid]]" alt="小西洋平" class="w-16 h-16 rounded-full object-cover">
+                    <div>
+                        <p class="font-bold text-gray-900">小西 洋平（ナナフシ）</p>
+                        <p class="text-sm text-gray-500">CMO / 元29万人YouTuber</p>
+                        <p class="text-xs text-gray-400">SNS総フォロワー 60万人</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why We? セクション -->
+        <section class="py-12 md:py-20 border-t border-gray-200">
+            <div class="break-words">
+                <p class="text-we-green font-bold text-xs tracking-widest mb-4">WHY WE?</p>
+
+                <h2 class="text-2xl md:text-4xl font-black leading-tight mb-10">
+                    なぜWe運送なら<br>
+                    <span class="text-we-green">人生が変わるのか？</span>
+                </h2>
+
+                <div class="grid gap-6 md:gap-8">
+
+                    <!-- 理由1: 稼げる -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8">
+                        <div class="flex items-start gap-4">
+                            <span class="text-we-green font-black text-3xl md:text-4xl">01</span>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-black mb-3">稼げる</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    中抜きなしの直契約＆帰り荷マッチングで高収入。<br>
+                                    完全DX化で「事務員ゼロ」を実現。<br>
+                                    <span class="font-bold text-gray-900">浮いた固定費は、すべてあんた（ドライバー）に還元する。</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 理由2: 学べる -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8">
+                        <div class="flex items-start gap-4">
+                            <span class="text-we-green font-black text-3xl md:text-4xl">02</span>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-black mb-3">学べる</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    運転中は音声動画学習。Zoomを繋げば、他のドライバーともリアルタイムで仲間になれる。<br>
+                                    休憩中はAIを使ってWebサイトでも動画でも作れる。<br>
+                                    <span class="font-bold text-gray-900">小西（CMO）が、AI時代のマーケティングを直伝。</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 理由3: 誇れる -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8">
+                        <div class="flex items-start gap-4">
+                            <span class="text-we-green font-black text-3xl md:text-4xl">03</span>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-black mb-3">誇れる</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    電話とFAX…ここは昭和か！<br>
+                                    そんな旧態依然とした運送業界を、DXでひっくり返す。<br>
+                                    <span class="font-bold text-gray-900">日本を支える「革命のチーム」の一員になろう。</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- YouTube セクション -->
+        <section class="py-12 md:py-20 border-t border-gray-200">
+            <div class="break-words">
+                <p class="text-we-green font-bold text-xs tracking-widest mb-4">YOUTUBE</p>
+
+                <h2 class="text-2xl md:text-4xl font-black leading-tight mb-8">
+                    <span class="text-we-green">動画で見る</span> We運送
+                </h2>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-3 md:p-4">
+                    <div class="relative w-full" style="padding-bottom: 56.25%;">
+                        <iframe
+                            src="https://www.youtube.com/embed/9Q5xz_3CDXo"
+                            title="We運送"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            class="absolute top-0 left-0 w-full h-full rounded-xl">
+                        </iframe>
+                    </div>
+                </div>
+
+                <p class="text-gray-500 text-sm mt-4 text-center">
+                    CMO小西のチャンネルより
+                </p>
+            </div>
+        </section>
+
+        <!-- 経営陣セクション -->
+        <section class="py-12 md:py-20 border-t border-gray-200">
+            <div class="break-words">
+                <p class="text-we-green font-bold text-xs tracking-widest mb-4">FOUNDING TEAM</p>
+
+                <h2 class="text-2xl md:text-4xl font-black leading-tight mb-10">
+                    <span class="text-we-green">最強のタッグ</span>
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+
+                    <!-- CEO -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8">
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="bg-we-green text-white px-3 py-1 rounded-full text-xs font-bold">CEO</span>
+                            <span class="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs">元大型ドライバー</span>
+                        </div>
+                        <div class="text-center mb-4">
+                            <img src="https://uje16oqk.autosns.app/s/スクリーンショット2025-12-0416.38.50.png?uid=[[uid]]" alt="宇井武志" class="w-20 h-20 rounded-full mx-auto object-cover">
+                        </div>
+                        <h3 class="text-xl font-black text-center mb-1">宇井 武志</h3>
+                        <p class="text-gray-500 text-sm mb-6 text-center">運送会社＆自動車修理・販売会社 代表</p>
+                        <div class="border-l-4 border-we-green pl-4 mb-4">
+                            <p class="font-bold text-gray-900">
+                                「ハンドルを握っていたから、現場のすべてがわかる。」
+                            </p>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            元大型ドライバーからの叩き上げ。現在は運送会社と自動車修理&販売会社を経営。車両トラブルにも即対応できるその道のプロ。人呼んで、<span class="font-bold">「信頼と安心の宇井」</span>。
+                        </p>
+                    </div>
+
+                    <!-- CMO -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8">
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">CMO</span>
+                            <span class="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs">元29万人YouTuber</span>
+                        </div>
+                        <div class="text-center mb-4">
+                            <img src="https://uje16oqk.autosns.app/s/GeneratedImageDecember04,2025-4_36PM.png?uid=[[uid]]" alt="小西洋平" class="w-20 h-20 rounded-full mx-auto object-cover">
+                        </div>
+                        <h3 class="text-xl font-black text-center mb-1">小西 洋平（ナナフシ）</h3>
+                        <p class="text-gray-500 text-sm mb-6 text-center">DX設計 / AI活用コンサルタント</p>
+                        <div class="border-l-4 border-blue-500 pl-4 mb-4">
+                            <p class="font-bold text-gray-900">
+                                「トラックの中から、AIで世界を変える。」
+                            </p>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            元登録者29万人のYouTuber。現在も4tトラックを走らせながらAIを駆使。このサイトも動画も、トラックの中で作った。信号待ち、渋滞、待機時間を味方につける<span class="font-bold">「ドライバー2.0」</span>。
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTAセクション -->
+        <section id="entry" class="py-12 md:py-20">
+            <div class="bg-we-green rounded-3xl p-8 md:p-12 text-center text-white">
+                <p class="font-bold text-xs tracking-widest mb-4 opacity-80">JOIN US</p>
+
+                <h2 class="text-2xl md:text-4xl font-black leading-tight mb-6">
+                    人生を変える準備は<br>
+                    できてるか？
+                </h2>
+
+                <p class="text-base md:text-lg opacity-90 mb-8 max-w-lg mx-auto">
+                    詰んでると思ってるなら、ここがスタートラインや。<br>
+                    <span class="font-bold">[We]</span>で一緒に、日本の物流を変えよう。<br>
+                    日本を支える物流網を、Weで作ろう！
+                </p>
+
+                <a href="#" class="inline-flex items-center justify-center gap-2 bg-white text-we-green font-black text-base md:text-lg px-10 py-5 rounded-full hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                    </svg>
+                    LINEで人生を変える
+                </a>
+
+                <p class="text-sm mt-6 opacity-70">
+                    （履歴書不要！）
+                </p>
+            </div>
+        </section>
+
+        <!-- フッター -->
+        <footer class="py-8 border-t border-gray-200 text-center">
+            <div class="mb-4">
+                <span class="text-xl font-black">We</span>
+                <span class="text-sm font-bold text-we-green ml-1">運送</span>
+            </div>
+            <p class="text-gray-500 text-xs">
+                &copy; 2024 We運送. All rights reserved.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
